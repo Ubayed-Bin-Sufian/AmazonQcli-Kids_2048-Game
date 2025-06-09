@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kids_2048"
+version = "1.0.0"
+description = "A colorful, kid-friendly version of the classic 2048 game"
+readme = "README.md"
+authors = [
+    {name = "Kids 2048 Game Developer", email = "example@example.com"}
+]
+license = {file = "LICENSE"}
+requires-python = ">=3.11"
+dependencies = [
+    "pygame>=2.5.2",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/kids-2048"
+"Bug Tracker" = "https://github.com/yourusername/kids-2048/issues"
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+[tool.isort]
+profile = "black"
+line_length = 88

@@ -1,0 +1,30 @@
+{
+    "name": "Kids 2048 Game Development",
+    "image": "mcr.microsoft.com/devcontainers/python:3.11",
+    "features": {
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "3.11"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-python.black-formatter",
+                "ms-python.flake8"
+            ],
+            "settings": {
+                "python.linting.enabled": true,
+                "python.linting.flake8Enabled": true,
+                "python.formatting.provider": "black",
+                "editor.formatOnSave": true,
+                "python.defaultInterpreterPath": "/usr/local/bin/python"
+            }
+        }
+    },
+    "postCreateCommand": "pip install --user -r requirements.txt && mkdir -p assets/fonts && mkdir -p assets/images && mkdir -p assets/sounds",
+    "postStartCommand": "python main.py",
+    "forwardPorts": [],
+    "remoteUser": "vscode"
+}
